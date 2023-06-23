@@ -4,7 +4,14 @@ import style from "./Form.module.scss";
 import BasicHeader from "../../molecules/BasicHeader/BasicHeader";
 
 const Form = () => {
-  const context = useContext(FormContext);
+  const { setValues } = useContext(FormContext);
+
+  const handleValueChange = (field, value) => {
+    setValues((prevState) => ({
+      ...prevState,
+      [field]: value,
+    }));
+  };
 
   return (
     <section className={style.formSection}>
@@ -19,12 +26,7 @@ const Form = () => {
             name="flexDirection"
             id="flexDirection"
             className={style.select}
-            onChange={(e) =>
-              context.setValues((prevState) => ({
-                ...prevState,
-                flexDirection: e.target.value,
-              }))
-            }
+            onChange={(e) => handleValueChange("flexDirection", e.target.value)}
           >
             <option value="row">row</option>
             <option value="column">column</option>
@@ -34,7 +36,7 @@ const Form = () => {
           <label htmlFor="flexWrap" className={style.label}>
             Flex Wrap
           </label>
-          <select name="flexWrap" id="flexWrap" className={style.select} onChange={(e) => context.setValues({ flexWrap: e.target.value })}>
+          <select name="flexWrap" id="flexWrap" className={style.select} onChange={(e) => handleValueChange("flexWrap", e.target.value)}>
             <option value="wrap">wrap</option>
             <option value="nowrap">nowrap</option>
           </select>
@@ -43,7 +45,12 @@ const Form = () => {
           <label htmlFor="justifyContent" className={style.label}>
             Justify Content
           </label>
-          <select name="justifyContent" id="justifyContent" className={style.select}>
+          <select
+            name="justifyContent"
+            id="justifyContent"
+            className={style.select}
+            onChange={(e) => handleValueChange("justifyContent", e.target.value)}
+          >
             <option value="flex-start">flex-start</option>
             <option value="flex-end">flex-end</option>
             <option value="center">center</option>
@@ -54,7 +61,7 @@ const Form = () => {
           <label htmlFor="alginItems" className={style.label}>
             Algin Items
           </label>
-          <select name="alginItems" id="alginItems" className={style.select}>
+          <select name="alginItems" id="alginItems" className={style.select} onChange={(e) => handleValueChange("alginItems", e.target.value)}>
             <option value="flex-start">flex-start</option>
             <option value="flex-end">flex-end</option>
             <option value="center">center</option>
@@ -66,7 +73,12 @@ const Form = () => {
           <label htmlFor="alginContent" className={style.label}>
             Algin Content
           </label>
-          <select name="alginContent" id="alginContent" className={style.select}>
+          <select
+            name="alginContent"
+            id="alginContent"
+            className={style.select}
+            onChange={(e) => handleValueChange("alginContent", e.target.value)}
+          >
             <option value="flex-start">flex-start</option>
             <option value="flex-end">flex-end</option>
             <option value="center">center</option>
@@ -81,6 +93,3 @@ const Form = () => {
 };
 
 export default Form;
-{
-  /* <input type="text" onChange={(e) => context.setTest(e.target.value)} /> */
-}
