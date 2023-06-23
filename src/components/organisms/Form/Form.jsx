@@ -15,7 +15,17 @@ const Form = () => {
           <label htmlFor="flexDirection" className={style.label}>
             Flex Direction
           </label>
-          <select name="flexDirection" id="flexDirection" className={style.select}>
+          <select
+            name="flexDirection"
+            id="flexDirection"
+            className={style.select}
+            onChange={(e) =>
+              context.setValues((prevState) => ({
+                ...prevState,
+                flexDirection: e.target.value,
+              }))
+            }
+          >
             <option value="row">row</option>
             <option value="column">column</option>
           </select>
@@ -24,7 +34,7 @@ const Form = () => {
           <label htmlFor="flexWrap" className={style.label}>
             Flex Wrap
           </label>
-          <select name="flexWrap" id="flexWrap" className={style.select}>
+          <select name="flexWrap" id="flexWrap" className={style.select} onChange={(e) => context.setValues({ flexWrap: e.target.value })}>
             <option value="wrap">wrap</option>
             <option value="nowrap">nowrap</option>
           </select>
