@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #E8E9F3;
+}
+
+h1,h2,h3,h4,h5 {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  height: auto;
+  width: 100%;
+}
+
+.contentContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@media(width > 600px) {
+  .contentContainer {
+    flex-direction: row;
+  }
+}
+
+
+/* #272635 */
+
+/* #A6A6A8 */
