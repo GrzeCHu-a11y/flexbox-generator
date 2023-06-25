@@ -1,0 +1,34 @@
+.formSection {
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.optionsContainer {
+    background-color: #E8E9F3;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    width: 100%;
+    height: auto;
+
+    margin: 5px 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+
+    .label {
+        flex-grow: 1;
+    }
+
+    .select {
+        width: 100px;
+    }
+}
