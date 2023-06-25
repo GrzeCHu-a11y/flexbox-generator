@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../../../globalStyles/OutputCode.module.scss";
+import style from "./OutputCss.module.scss";
 const OutputCss = ({ values }) => {
   return (
     <div className={style.container}>
