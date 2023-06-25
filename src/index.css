@@ -31,12 +31,9 @@ main {
   flex-direction: column;
 }
 
-@media(width > 600px) {
-  .contentContainer {
-    flex-direction: row;
-  }
+section {
+  padding: 40px 0;
 }
-
 /* kolor wygenerowny kod  */
 /* #272635 */
 

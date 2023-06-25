@@ -4,7 +4,7 @@ import style from "./BasicHeader.module.scss";
 const BasicHeader = ({ name }) => {
   return (
     <header className={style.header}>
-      <h2>{name}</h2>
+      <h2 className={style.h2}>{name}</h2>
     </header>
   );
 };

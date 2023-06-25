@@ -6,12 +6,12 @@ import OutputCss from "../../molecules/OutputCss/OutputCss";
 import OutputHtml from "../../molecules/OutputHtml/OutputHtml";
 
 const GeneratedCode = () => {
-  const context = useContext(FormContext);
+  const { value } = useContext(FormContext);
   return (
     <section>
       <BasicHeader name="Code" />
       <div className={style.codeContainer}>
-        <OutputCss />
+        <OutputCss values={value} />
         <OutputHtml />
       </div>
     </section>

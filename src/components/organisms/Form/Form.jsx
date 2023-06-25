@@ -16,7 +16,6 @@ const Form = () => {
   return (
     <section className={style.formSection}>
       <BasicHeader name="Chose options" />
-      <br />
       <div className={style.optionsContainer}>
         <div className={style.item}>
           <label htmlFor="flexDirection" className={style.label}>
