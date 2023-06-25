@@ -58,10 +58,10 @@ const Form = () => {
           </select>
         </div>
         <div className={style.item}>
-          <label htmlFor="alginItems" className={style.label}>
+          <label htmlFor="alignItems" className={style.label}>
             Algin Items
           </label>
-          <select name="alginItems" id="alginItems" className={style.select} onChange={(e) => handleValueChange("alginItems", e.target.value)}>
+          <select name="alignItems" id="alignItems" className={style.select} onChange={(e) => handleValueChange("alignItems", e.target.value)}>
             <option value="flex-start">flex-start</option>
             <option value="flex-end">flex-end</option>
             <option value="center">center</option>
@@ -74,10 +74,10 @@ const Form = () => {
             Algin Content
           </label>
           <select
-            name="alginContent"
-            id="alginContent"
+            name="alignContent"
+            id="alignContent"
             className={style.select}
-            onChange={(e) => handleValueChange("alginContent", e.target.value)}
+            onChange={(e) => handleValueChange("alignContent", e.target.value)}
           >
             <option value="flex-start">flex-start</option>
             <option value="flex-end">flex-end</option>

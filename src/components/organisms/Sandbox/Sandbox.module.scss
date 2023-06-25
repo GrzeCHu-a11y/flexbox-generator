@@ -1,0 +1,15 @@
+.sandboxContainer {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 60px;
+    height: 40vh;
+    border: 3px dashed rgb(175, 118, 229);
+}
+
+.item {
+    width: 70px;
+    height: 70px;
+    background-color: rgb(77, 77, 172);
+    margin: 5px;
+}

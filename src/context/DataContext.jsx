@@ -7,8 +7,8 @@ export const DataContext = ({ children }) => {
     flexDirection: "row",
     flexWrap: "nowrap",
     justifyContent: "flex-start",
-    alginItems: "flex-start",
-    alginContent: "flex-start",
+    alignItems: "flex-start",
+    alignContent: "flex-start",
   });
 
   return <FormContext.Provider value={{ setValues, value }}>{children}</FormContext.Provider>;
